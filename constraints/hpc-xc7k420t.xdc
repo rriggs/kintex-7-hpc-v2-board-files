@@ -1,16 +1,14 @@
 ########## CLOCK  100M ##########
-#set_property -dict { PACKAGE_PIN U24 } [get_ports clk]
-#set_property -dict { IOSTANDARD LVCMOS25 } [get_ports clk]
+#set_property -dict { PACKAGE_PIN U24  IOSTANDARD LVCMOS25 } [get_ports clk]
 
 ########## CLOCK  133M ##########
-#set_property -dict { PACKAGE_PIN T25 } [get_ports clk]
-#set_property -dict { IOSTANDARD LVCMOS25 } [get_ports clk]
+#set_property -dict { PACKAGE_PIN T25  IOSTANDARD LVCMOS25 } [get_ports clk]
 
 ########### BUTTONS ##########
 #set_property -dict { PACKAGE_PIN A16  IOSTANDARD LVCMOS25 } [get_ports {btn[0]}]
-#set_property -dict { PACKAGE_PIN B1  IOSTANDARD LVCMOS25 } [get_ports {btn[1]}]
+#set_property -dict { PACKAGE_PIN B1   IOSTANDARD LVCMOS25 } [get_ports {btn[1]}]
 #set_property -dict { PACKAGE_PIN J24  IOSTANDARD LVCMOS15 } [get_ports {btn[2]}]
-#set_false_path -from [get_ports {key[*]}]
+#set_false_path -from [get_ports {btn[*]}]
 #
 ########### SWITCHES ##########
 #set_property -dict { PACKAGE_PIN Y24  IOSTANDARD LVCMOS15 } [get_ports {sw[0]}]
@@ -39,7 +37,7 @@
 #
 ########### GTX CONSTRAINTS    156.25M  GTX 117 ##########
 #set_property -dict { PACKAGE_PIN G8   } [get_ports mgt_clock_a_156_clk_p]
-#set_property -dict { PACKAGE_PIN G7   } [get_ports mgt_clock_b_156_clk_n]
+#set_property -dict { PACKAGE_PIN G7   } [get_ports mgt_clock_a_156_clk_n]
 ########### GTX CONSTRAINTS    156.25M  GTX 114 ##########
 #set_property -dict { PACKAGE_PIN T6   } [get_ports mgt_clock_b_156_clk_p]
 #set_property -dict { PACKAGE_PIN T5   } [get_ports mgt_clock_b_156_clk_n]
@@ -122,7 +120,7 @@
 #
 ########### --------- PCIE ------------##########
 #set_property -dict { PACKAGE_PIN AD5  } [get_ports pcie_refclk_n]
-#set_property -dict { PACKAGE_PIN AD6  } [get_ports pcie_refclk_[]
+#set_property -dict { PACKAGE_PIN AD6  } [get_ports pcie_refclk_p]
 #
 #set_property -dict { PACKAGE_PIN W21  IOSTANDARD LVCMOS25 } [get_ports pcie_reset_n]
 #
